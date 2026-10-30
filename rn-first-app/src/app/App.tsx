@@ -9,6 +9,7 @@ import type { JSX } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { RootNavigator } from "./navigation/RootNavigator";
+import Toast from "react-native-toast-message";
 
 function App(): JSX.Element {
   return (
@@ -17,6 +18,8 @@ function App(): JSX.Element {
       <NavigationContainer>
         <RootNavigator />
       </NavigationContainer>
+      {/* Toast.show()로 띄우는 토스트가 그려지는 곳 (화면들보다 위에 보이도록 마지막에 둠) */}
+      <Toast />
     </SafeAreaProvider>
   );
 }
